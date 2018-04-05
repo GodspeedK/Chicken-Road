@@ -5,7 +5,7 @@ public class Safezone extends Terrain {
 	public Safezone(int tileY, Chicken_Road app) {
 		super.posY = tileY * 100;
 		super.app = app;
-		super.texture = app.loadImage("safe.jpg");
+		super.texture = app.loadImage("src/main/java/nl/han/ica/Chickenroad/media/safe.jpg");
 	}
 
 

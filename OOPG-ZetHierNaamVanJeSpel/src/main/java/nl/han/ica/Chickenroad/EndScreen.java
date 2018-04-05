@@ -9,7 +9,7 @@ public class EndScreen extends Screen{
 
 	public EndScreen(Chicken_Road app) {
 		super(app);
-		background = app.loadImage("gameover.png");
+		background = app.loadImage("src/main/java/nl/han/ica/Chickenroad/media/gameover.png");
 	}
 
 	@SuppressWarnings("static-access")

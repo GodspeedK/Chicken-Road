@@ -8,7 +8,7 @@ public class StartScreen extends Screen {
 	
 	public StartScreen(Chicken_Road app) {
 		super(app);
-		background = app.loadImage("StartMenu.png");
+		background = app.loadImage("src/main/java/nl/han/ica/Chickenroad/media/StartMenu.png");
 	}
 	
 	@SuppressWarnings("static-access")
