@@ -6,10 +6,10 @@ import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 public class Player extends AnimatedSpriteObject {
     private int size;
     private int levens;
-    private Chickenroad app;
+    private Chicken_Road app;
     private boolean walk = false;
 
-    public Player(int size, int levens, Chickenroad app) {
+    public Player(int size, int levens, Chicken_Road app) {
         super(new Sprite("src/main/java/nl/han/ica/Chickenroad/media/kipwit.png"), 12);
         this.size = size;
         this.levens = levens;

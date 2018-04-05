@@ -1,4 +1,4 @@
-package nl.han.ica.chickenroad;
+package nl.han.ica.Chickenroad;
 
 import processing.core.PApplet;
 import processing.core.PImage;

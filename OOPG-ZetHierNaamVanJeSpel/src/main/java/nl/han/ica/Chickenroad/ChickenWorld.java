@@ -1,10 +1,10 @@
-package nl.han.ica.chickenroad;
+package nl.han.ica.Chickenroad;
 
 import java.util.ArrayList;
 
 public class ChickenWorld {
 	private ArrayList<Terrain> terrains;
-	private ArrayList<IPickups> eggs;
+	//private ArrayList<IPickups> eggs;
 	private Chicken_Road app;
 	private int layers;
 	private LevelScreen lvl;
@@ -12,16 +12,16 @@ public class ChickenWorld {
 	public ChickenWorld(Chicken_Road app, Player player) {
 		this.layers = app.height / 100;
 		this.terrains = new ArrayList<Terrain>(layers);
-		this.eggs = new ArrayList<IPickups>(3);
+		//this.eggs = new ArrayList<IPickups>(3);
 		
 		// Initial values
 		for (int i=0; i < layers; i++) {
 			terrains.add(null);
 		}
 		
-		for (int i=0; i < 3; i++) {
-			eggs.add(null);
-		}
+		//for (int i=0; i < 3; i++) {
+			//eggs.add(null);
+		//}
 		
 		this.app = app;
 		
@@ -57,16 +57,16 @@ public class ChickenWorld {
 	/**
 	 * Draws the pickups
 	 */
-	public void drawPickups() {
+	//public void drawPickups() {
 
-		for (int i=0; i < eggs.size(); i++) {
-			Egg e = (Egg) eggs.get(i);
-			if (e != null) {
-				e.draw();
-			}
-		}
+		//for (int i=0; i < eggs.size(); i++) {
+			//Egg e = (Egg) eggs.get(i);
+			//if (e != null) {
+				//e.draw();
+			//}
+		//}
 		
-	}
+	//}
 	
 	/**
 	 * Draws the stage screen if it's valid
@@ -98,13 +98,13 @@ public class ChickenWorld {
 		}
 		
 		// Create pickups
-		createEggs();
+		//createEggs();
 	}
 	
 	/**
 	 * Fills the pickups arraylist with coins
 	 */
-	private void createEggs() {
+	/*private void createEggs() {
 		int amount = (int)app.random(5, 9);
 		eggs.clear();
 		
@@ -114,14 +114,14 @@ public class ChickenWorld {
 			eggs.add(new Egg(app, x, y, 30));
 		}
 	}
-	
+	*/
 	/**
 	 * Returns the arraylist of coins
 	 * @return coins - The arraylist of coins
-	 */
-	public ArrayList<IPickups> getEggs() {
+	 */   
+	/*public ArrayList<IPickups> getEggs() {
 		return eggs;
-	}
+	}*/
 	
 	/**
 	 * Checks if the stage screen object has been made yet

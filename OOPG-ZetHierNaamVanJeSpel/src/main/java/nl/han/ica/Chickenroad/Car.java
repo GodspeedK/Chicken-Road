@@ -1,4 +1,4 @@
-package nl.han.ica.chickenroad;
+package nl.han.ica.Chickenroad;
 
 import processing.core.PImage;
 
@@ -20,10 +20,10 @@ public class Car extends Obstacle {
 		this.directionRight = directionRight;
 		
 		if (directionRight) {
-			sprite = app.loadImage("car_" + decideColor() + "_right.png"); zoek afbeelding
+			sprite = app.loadImage("car_" + decideColor() + "autoR.png"); 
 			posX = (int)app.random(-200, 0);
 		} else {
-			sprite = app.loadImage("car_" + decideColor() + "_left.png"); zoek afbeelding
+			sprite = app.loadImage("car_" + decideColor() + "autoL.png");
 			posX = (int)app.random(app.width, app.width + 200);
 		}
 	}

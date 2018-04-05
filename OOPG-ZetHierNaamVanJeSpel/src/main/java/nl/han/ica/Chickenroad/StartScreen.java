@@ -1,4 +1,4 @@
-package nl.han.ica.chickenroad;
+package nl.han.ica.Chickenroad;
 
 import processing.core.PImage;
 
@@ -20,5 +20,15 @@ public class StartScreen extends Screen {
 		app.textAlign(app.CENTER);
 		app.text("Press ENTER to start", app.width / 2, app.height - 50);
 		app.textAlign(app.CORNER);
+	}
+	
+	/*
+	 * Checks if the game should start
+	 */
+	@SuppressWarnings("static-access")
+	public void checkChange() {
+		if (app.keyCode == app.ENTER) {
+			app.setState(2);
+		}
 	}
 }

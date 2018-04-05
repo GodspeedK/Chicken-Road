@@ -1,4 +1,4 @@
-package nl.han.ica.chickenroad;
+package nl.han.ica.Chickenroad;
 
 public class Road extends Terrain {
 	
@@ -7,7 +7,7 @@ public class Road extends Terrain {
 	public Road(int tileY, Chicken_Road app) {
 		super.posY = tileY * 100;
 		super.app = app;
-		super.texture = app.loadImage(""); vind afbeelding
+		super.texture = app.loadImage("weg.png");
 		
 		// Randomly decide whether we go left or right
 		int num = (int)app.random(0, 2);

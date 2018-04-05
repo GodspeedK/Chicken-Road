@@ -5,7 +5,7 @@
  * Docent: Meron Brouwer
  */
 
-package nl.han.ica.chickenroad;
+package nl.han.ica.Chickenroad;
 
 import com.sun.prism.image.ViewPort;
 
@@ -19,9 +19,6 @@ import nl.han.ica.OOPDProcessingEngineHAN.Tile.TileMap;
 import nl.han.ica.OOPDProcessingEngineHAN.Tile.TileType;
 import nl.han.ica.OOPDProcessingEngineHAN.View.EdgeFollowingViewport;
 import nl.han.ica.OOPDProcessingEngineHAN.View.View;
-import nl.han.ica.waterworld.Player;
-import nl.han.ica.waterworld.Swordfish;
-import nl.han.ica.waterworld.tiles.BoardsTile;
 import processing.core.PApplet;
 
 public class Chicken_Road extends GameEngine{
@@ -43,7 +40,7 @@ public class Chicken_Road extends GameEngine{
 	public int score = -1000;
 	
 	public static void main(String[] args) {
-		PApplet.main(new String[]{"\"nl.han.ica.chicken_road.Chicken_Road\""});
+		PApplet.main(new String[]{"nl.han.ica.Chickenroad.Chicken_Road"});
 	}
 	
     @Override
@@ -55,6 +52,8 @@ public class Chicken_Road extends GameEngine{
 		startScreen = new StartScreen(this);
 		endScreen = new EndScreen(this);
 		scoreBoard = new ScoreBoard(this);
+		player = new Player(50, 3, this);
+		world = new ChickenWorld(this, player);
 		
 		createViewWithoutViewport(worldWidth, worldHeight);
 
@@ -62,15 +61,13 @@ public class Chicken_Road extends GameEngine{
     
     private void createViewWithoutViewport(int screenWidth, int screenHeight) {
         View view = new View(screenWidth,screenHeight);
-        view.setBackground(loadImage("src/main/java/nl/han/ica/waterworld/media/background.jpg")); afbeelding
+        view.setBackground(loadImage("kfc.png"));
 
         setView(view);
         size(screenWidth, screenHeight);
     }
     
     private void createObjects() {
-		player = new Player(this, 300, 540, 18, tileSize);
-		world = new ChickenWorld(this, player);
     }
     
 	public void draw() {
@@ -101,9 +98,9 @@ public class Chicken_Road extends GameEngine{
 	 */
 	private void playScreen() {
 		world.drawTerrain();
-		world.drawPickups();
+		//world.drawPickups();
 		world.drawObstacles();
-		player.draw();
+		//player.draw();
 		world.drawStageScreen();
 		if (drawScoreboard) {
 			scoreBoard.draw();

@@ -1,11 +1,11 @@
-package nl.han.ica.chickenroad;
+package nl.han.ica.Chickenroad;
 
 public class Safezone extends Terrain {
 
 	public Safezone(int tileY, Chicken_Road app) {
 		super.posY = tileY * 100;
 		super.app = app;
-		super.texture = app.loadImage(""); voeg afbeelding toe
+		super.texture = app.loadImage("safe.jpg");
 	}
 
 
