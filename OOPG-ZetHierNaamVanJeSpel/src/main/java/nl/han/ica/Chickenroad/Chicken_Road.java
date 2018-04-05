@@ -11,9 +11,11 @@ import nl.han.ica.OOPDProcessingEngineHAN.Engine.GameEngine;
 import nl.han.ica.OOPDProcessingEngineHAN.View.View;
 import processing.core.PApplet;
 
-public class Chicken_Road extends GameEngine{
+public class Chicken_Road extends PApplet{
 	
 	// General variables
+	private int screenWidth 		= 800;
+	private int screenHeight 		= 600;
 	private int tileSize 			= 100;
 	private int state				= 1; // 1 = start screen, 2 = playing, 3 = end screen
 	private boolean drawScoreboard	= false;
@@ -33,29 +35,21 @@ public class Chicken_Road extends GameEngine{
 		PApplet.main(new String[]{"nl.han.ica.Chickenroad.Chicken_Road"});
 	}
 	
+	public void settings() {
+		size(screenWidth, screenHeight);
+	}
+	
     @Override
-    public void setupGame() {
-
-        int worldWidth=1204;
-        int worldHeight=903;
+    public void setup() {
         
 		startScreen = new StartScreen(this);
 		endScreen = new EndScreen(this);
 		scoreBoard = new ScoreBoard(this);
 		player = new Player(50, 3, this);
 		world = new ChickenWorld(this, player);
-		
-		createViewWithoutViewport(worldWidth, worldHeight);
 
     }
     
-    private void createViewWithoutViewport(int screenWidth, int screenHeight) {
-        View view = new View(screenWidth,screenHeight);
-        //view.setBackground(loadImage("src/main/java/nl/han/ica/Chickenroad/media/kfc.png"));
-
-        setView(view);
-        size(screenWidth, screenHeight);
-    }
     
     private void createObjects() {
     }
@@ -148,8 +142,14 @@ public class Chicken_Road extends GameEngine{
 		this.state = state;
 	}
 	
-    @Override
+    
     public void update() {
     }
+
+	
+	public void setupGame() {
+		// TODO Auto-generated method stub
+		
+	}
     
 }
